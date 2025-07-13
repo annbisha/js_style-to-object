@@ -31,7 +31,7 @@ const complexStylesString = `
   width: auto;
 `;
 
-function cssStringToObject(cssString) {
+function convertToObject (cssString) {
   const obj = {};
   cssString.split(';').forEach(rule => {
     const [key, value] = rule.split(':');
@@ -43,7 +43,7 @@ function cssStringToObject(cssString) {
 }
 
 
-const stylesObject = cssStringToObject(complexStylesString);
+const stylesObject = convertToObject (complexStylesString);
 
 
 module.exports = stylesObject;
